@@ -3,9 +3,9 @@ services:
 - source: /runtime/services/tables.yml
   client_config: {}
   server_config: {}
-package_name: M3_App_1
+package_name: Staff_Feedback
 allow_embedding: false
-name: M3 App 1
+name: Staff Feedback
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
   server_spec: null}
 startup_form: Form1
@@ -23,6 +23,15 @@ db_schema:
     - name: Staff
       admin_ui: {width: 200}
       type: string
+    - name: Efficiency
+      type: number
+      admin_ui: {width: 200, order: 3}
+    - name: Clarity
+      type: number
+      admin_ui: {width: 200, order: 4}
+    - name: Professionalism
+      type: number
+      admin_ui: {width: 200, order: 5}
     title: Feedback
   pms:
     client: search
@@ -72,6 +81,12 @@ db_schema:
   feedback_item_describe:
     client: search
     server: full
-    columns: []
+    columns:
+    - name: FeedbackCode
+      type: string
+      admin_ui: {width: 200, order: 0}
+    - name: FeedbackDescribe
+      type: string
+      admin_ui: {width: 200, order: 1}
     title: Feedback_item_describe
 renamed: true
