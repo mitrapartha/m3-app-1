@@ -1,12 +1,72 @@
-allow_embedding: false
-package_name: M3_App_1
-name: M3 App 1
-startup_form: Form1
-renamed: true
-runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
-  server_spec: null}
 dependencies: []
 services:
 - source: /runtime/services/tables.yml
   client_config: {}
   server_config: {}
+package_name: M3_App_1
+allow_embedding: false
+name: M3 App 1
+runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
+  server_spec: null}
+startup_form: Form1
+db_schema:
+  feedback:
+    client: none
+    server: full
+    columns:
+    - name: PM
+      admin_ui: {width: 200}
+      type: string
+    - name: Project
+      admin_ui: {width: 200}
+      type: string
+    - name: Staff
+      admin_ui: {width: 200}
+      type: string
+    title: Feedback
+  pms:
+    client: none
+    server: full
+    columns:
+    - name: PM_ID
+      admin_ui: {order: 0, width: 200}
+      type: number
+    - name: Name
+      type: string
+      admin_ui: {width: 200, order: 1}
+    - name: Email
+      type: string
+      admin_ui: {width: 200, order: 2}
+    - name: Active
+      type: bool
+      admin_ui: {width: 200, order: 3}
+    title: PMs
+  staff:
+    client: none
+    server: full
+    columns:
+    - name: Staff_ID
+      admin_ui: {order: 0, width: 200}
+      type: number
+    - name: Name
+      type: string
+      admin_ui: {width: 200, order: 1}
+    - name: Email
+      type: string
+      admin_ui: {width: 200, order: 2}
+    - name: Active
+      type: bool
+      admin_ui: {width: 200, order: 3}
+    title: Staff
+  project_names:
+    title: Project_Names
+    client: none
+    server: full
+    columns:
+    - name: Proj_ID
+      admin_ui: {width: 200}
+      type: number
+    - name: Proj_Names
+      admin_ui: {width: 200}
+      type: string
+renamed: true
