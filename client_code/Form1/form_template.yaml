@@ -55,6 +55,28 @@ components:
       underline: false, icon: ''}
     name: label_2
     layout_properties: {grid_position: 'FXHNJB,ZGFRPX'}
+  - type: DropDown
+    properties:
+      role: null
+      align: full
+      tooltip: ''
+      placeholder: Select Staff
+      border: ''
+      enabled: true
+      foreground: ''
+      items: []
+      visible: true
+      font_size: null
+      font: ''
+      spacing_above: small
+      spacing_below: small
+      italic: false
+      background: ''
+      bold: false
+      underline: false
+      include_placeholder: true
+    name: drop_down_2
+    layout_properties: {grid_position: 'FXHNJB,MYYFNP'}
 - type: FlowPanel
   properties: {}
   name: navbar_links

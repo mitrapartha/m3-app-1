@@ -11,7 +11,7 @@ runtime_options: {version: 2, client_version: '3', server_version: python3-sandb
 startup_form: Form1
 db_schema:
   feedback:
-    client: none
+    client: full
     server: full
     columns:
     - name: PM
@@ -25,7 +25,7 @@ db_schema:
       type: string
     title: Feedback
   pms:
-    client: none
+    client: search
     server: full
     columns:
     - name: PM_ID
@@ -42,7 +42,7 @@ db_schema:
       admin_ui: {width: 200, order: 3}
     title: PMs
   staff:
-    client: none
+    client: search
     server: full
     columns:
     - name: Staff_ID
@@ -60,7 +60,7 @@ db_schema:
     title: Staff
   project_names:
     title: Project_Names
-    client: none
+    client: search
     server: full
     columns:
     - name: Proj_ID
@@ -69,4 +69,9 @@ db_schema:
     - name: Proj_Names
       admin_ui: {width: 200}
       type: string
+  feedback_item_describe:
+    client: search
+    server: full
+    columns: []
+    title: Feedback_item_describe
 renamed: true
